@@ -6,24 +6,8 @@ from funcoes.quick_sort import QuickSort
 from funcoes.counting_sort import CountingSort
 from funcoes.heap_sort import HeapSort
 from funcoes.merge_sort import MergeSort
-
-def vetor_aleatorio(inc, fim, stp):
-    vetores = {}
-    
-    for n in range(inc, fim + 1, stp):
-        vetor = [random.randint(0, n**2) for _ in range(n)]
-        vetores[n] = vetor
-        
-    return vetores
-
-def vetor_reverso(inc, fim, stp):
-    vetores = {}
-    
-    for n in range(inc, fim + 1, stp):
-        vetor = [i for i in range(n, 0, -stp)]
-        vetores[n] = vetor
-        
-    return vetores
+from vetores.vetor_aleatorio import vetor_aleatorio
+from vetores.vetor_reverso import vetor_reverso
 
 #EXAMPLE
 inc = 1000
