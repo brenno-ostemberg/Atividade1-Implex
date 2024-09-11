@@ -27,7 +27,7 @@ inc = 1000
 fim = 20000
 stp = 1000
 
-vetores_gerados = vetor_aleatorio(inc, fim, stp)
+vetores_aleatorios = vetor_aleatorio(inc, fim, stp)
 vetores_reversos = vetor_reverso(inc, fim, stp)
 
 # Exibindo vetores reversos
@@ -44,7 +44,7 @@ for n, vetor in vetores_gerados.items(0):
 
 print("[[RANDOM]]")
 inicio = timeit.default_timer()
-for n, vetor in vetores_gerados.items():
+for n, vetor in vetores_aleatorios.items():
     bubble_sort(vetor)
     break
 fim = timeit.default_timer()
@@ -53,7 +53,7 @@ print ('duracao bubble sort: %f' % (fim - inicio))
 
 #---------------------------------Insertion--------------------
 inicio = timeit.default_timer()
-for n, vetor in vetores_gerados.items():
+for n, vetor in vetores_aleatorios.items():
     insertion_sort(vetor)
     break
 fim = timeit.default_timer()
