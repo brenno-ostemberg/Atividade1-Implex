@@ -2,6 +2,7 @@ import random
 import time 
 import timeit
 from funcoes.bubble_sort import bubble_sort 
+from funcoes.insertion_sort import insertion_sort
 
 def gerar_vetores(inc, fim, stp):
     vetores = {}
@@ -25,11 +26,21 @@ for n, vetor in vetores_gerados.items(0):
 
 print("[[RANDOM]]")
 inicio = timeit.default_timer()
-
 for n, vetor in vetores_gerados.items():
     bubble_sort(vetor)
     break
-
 fim = timeit.default_timer()
-print ('duracao: %f' % (fim - inicio))
+print ('duracao bubble sort: %f' % (fim - inicio))
+print(vetor)
+
+#---------------------------------Insertion--------------------
+inicio = timeit.default_timer()
+for n, vetor in vetores_gerados.items():
+    insertion_sort(vetor)
+    break
+fim = timeit.default_timer()
+print ('duracao insertion sort: %f' % (fim - inicio))
+print(vetor)
+
+
 
