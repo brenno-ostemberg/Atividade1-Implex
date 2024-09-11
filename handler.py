@@ -1,5 +1,4 @@
 import random
-import time 
 import timeit
 from funcoes.bubble_sort import BubbleSort
 from funcoes.insertion_sort import InsertionSort
