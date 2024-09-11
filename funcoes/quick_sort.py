@@ -1,22 +1,26 @@
-def partition(vetor, low, high):
+class QuickSort:
 
-    pivo = vetor[high]
-    i = low - 1
+    @staticmethod
+    def partition(vetor, low, high):
 
-    for j in range(low, high):
-        if vetor[j] <= pivo:
+        pivo = vetor[high]
+        i = low - 1
 
-            i = i + 1
+        for j in range(low, high):
+            if vetor[j] <= pivo:
 
-            (vetor[i], vetor[j]) = (vetor[j], vetor[i])
+                i = i + 1
 
-    (vetor[i + 1], vetor[high]) = (vetor[high], vetor[i + 1])
+                (vetor[i], vetor[j]) = (vetor[j], vetor[i])
 
-    return i + 1
+        (vetor[i + 1], vetor[high]) = (vetor[high], vetor[i + 1])
 
-def quick_sort(vetor, low, high):
-    if low < high:
+        return i + 1
 
-        pi = partition(vetor, low, high)
-        quick_sort(vetor, low, pi - 1)
-        quick_sort(vetor, pi + 1, high)
+    @staticmethod
+    def quick_sort(vetor, low, high):
+        if low < high:
+
+            pi = QuickSort.partition(vetor, low, high)
+            QuickSort.quick_sort(vetor, low, pi - 1)
+            QuickSort.quick_sort(vetor, pi + 1, high)
