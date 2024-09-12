@@ -8,6 +8,7 @@ from funcoes.heap_sort import HeapSort
 from funcoes.merge_sort import MergeSort
 from vetores.vetor_aleatorio import vetor_aleatorio
 from vetores.vetor_reverso import vetor_reverso
+from vetores.vetor_ordenado import vetor_ordenado
 
 #EXAMPLE
 inc = 1000
@@ -16,11 +17,22 @@ stp = 1000
 
 vetores_aleatorios = vetor_aleatorio(inc, fim, stp)
 vetores_reversos = vetor_reverso(inc, fim, stp)
+vetores_ordenados = vetor_ordenado(inc, fim, stp)
+
+# Exibindo vetores aleatórios
+print("[[RANDOM]]")
+for n, vetor in vetores_aleatorios.items():
+    print(f"Vetor aleatório com {n} elementos: {vetor[:5]}...")
 
 # Exibindo vetores reversos
-print("[[REVERSO]]")
+print("[[REVERSE]]")
 for n, vetor in vetores_reversos.items():
     print(f"Vetor reverso com {n} elementos: {vetor[:5]}...")
+
+# Exibindo vetores ordenados
+print("[[SORTED]]")
+for n, vetor in vetores_ordenados.items():
+    print(f"Vetor ordenado com {n} elementos: {vetor[:5]}...")
 
 ''' 
 # Exibindo um exemplo de vetor gerado
