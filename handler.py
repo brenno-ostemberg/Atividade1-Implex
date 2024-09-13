@@ -9,6 +9,7 @@ from funcoes.merge_sort import MergeSort
 from vetores.vetor_aleatorio import vetor_aleatorio
 from vetores.vetor_reverso import vetor_reverso
 from vetores.vetor_ordenado import vetor_ordenado
+from vetores.vetor_quase_ordenado import vetor_quase_ordenado
 
 #EXAMPLE
 inc = 1000
@@ -18,6 +19,7 @@ stp = 1000
 vetores_aleatorios = vetor_aleatorio(inc, fim, stp)
 vetores_reversos = vetor_reverso(inc, fim, stp)
 vetores_ordenados = vetor_ordenado(inc, fim, stp)
+vetores_quase_ordenados = vetor_quase_ordenado(inc, fim, stp)
 
 # Exibindo vetores aleatórios
 print("[[RANDOM]]")
@@ -33,6 +35,10 @@ for n, vetor in vetores_reversos.items():
 print("[[SORTED]]")
 for n, vetor in vetores_ordenados.items():
     print(f"Vetor ordenado com {n} elementos: {vetor[:5]}...")
+
+print("[[NEARLY SORTED]]")
+for n, vetor in vetores_quase_ordenados.items():
+    print(f"Vetor quase ordenado com {n} elementos: {vetor[:5]}...")
 
 ''' 
 # Exibindo um exemplo de vetor gerado
