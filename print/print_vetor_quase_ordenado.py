@@ -16,7 +16,7 @@ from funcoes.quick_sort import QuickSort
 from funcoes.counting_sort import CountingSort
 from funcoes.heap_sort import HeapSort
 from funcoes.merge_sort import MergeSort
-from vetores.vetor_ordenado import vetor_ordenado
+from vetores.vetor_quase_ordenado import vetor_quase_ordenado
 
 # Defina os tamanhos de vetores e o intervalo
 inc = 1000
@@ -24,12 +24,12 @@ fim = 20000
 stp = 1000
 
 # Gere vetores aleatórios
-vetores_ordenados = vetor_ordenado(inc, fim, stp)
+vetores_quase_ordenados = vetor_quase_ordenado(inc, fim, stp)
 
-print("[[SORTED]]")
+print("[[NEARLY SORTED]]")
 print("n    Bubble    Insertion    Merge    Heap   Quick    Counting")
 
-for tamanho, vetores in vetores_ordenados.items():
+for tamanho, vetores in vetores_quase_ordenados.items():
     # Bubble Sort
     inicio = timeit.default_timer()
     for vetor in [vetores]:  # Apenas um vetor por vez
