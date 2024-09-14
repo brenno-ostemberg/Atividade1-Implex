@@ -49,7 +49,7 @@ for n, vetor in vetores_reversos.items():
 
 
 print("[[RANDOM]]")
-print("n    Bubble    Insertion    Merge    Heap   Quick    Counting")
+print("n    Bubble    Insertion    Merge     Heap       Quick      Counting")
 
 inicio = timeit.default_timer()
 for n, vetor in vetores_aleatorios.items():
@@ -57,7 +57,7 @@ for n, vetor in vetores_aleatorios.items():
     BubbleSort.bubble_sort(vetor)
     break
 fim = timeit.default_timer()
-print (' %f' % (fim - inicio), end="")
+print (' %f' % (fim - inicio), end=" ")
 
 #---------------------------------Insertion--------------------
 inicio = timeit.default_timer()
@@ -74,7 +74,7 @@ for n, vetor in vetores_aleatorios.items():
     MergeSort.mergeSort(vetor, 0, len(vetor)-1)
     break
 fim = timeit.default_timer()
-print (' %f' % (fim - inicio), end=" ")
+print (' %f' % (fim - inicio), end="  ")
 
 #---------------------------------heap--------------------
 inicio = timeit.default_timer()
@@ -84,15 +84,67 @@ for n, vetor in vetores_aleatorios.items():
 fim = timeit.default_timer()
 print (' %f' % (fim - inicio), end="  ")
 
+
 #---------------------------------quick--------------------
 inicio = timeit.default_timer()
 for n, vetor in vetores_aleatorios.items():
-    QuickSort.quick_sort(vetor, 1, len(vetor))
+    QuickSort.quick_sort(vetor, 0, len(vetor) - 1)
+    break
+fim = timeit.default_timer()
+print (' %f' % (fim - inicio), end="  ")
+
+#---------------------------------counting--------------------
+inicio = timeit.default_timer()
+for n, vetor in vetores_aleatorios.items():
+    CountingSort.counting_sort(vetor)
+    break
+fim = timeit.default_timer()
+print (' %f' % (fim - inicio), end="  ")
+
+print("\n")
+#---------------------------------------fim vetor 1000---------------
+
+inicio = timeit.default_timer()
+for n, vetor in vetores_aleatorios.items():
+    print(n, end="")
+    BubbleSort.bubble_sort(vetor)
+  
+fim = timeit.default_timer()
+print (' %f' % (fim - inicio), end=" ")
+'''
+#---------------------------------Insertion--------------------
+inicio = timeit.default_timer()
+for n, vetor in vetores_aleatorios.items():
+    InsertionSort.insertion_sort(vetor)
+    break
+fim = timeit.default_timer()
+print (' %f' % (fim - inicio), end="   ")
+
+
+#---------------------------------merge--------------------
+inicio = timeit.default_timer()
+for n, vetor in vetores_aleatorios.items():
+    MergeSort.mergeSort(vetor, 0, len(vetor)-1)
+    break
+fim = timeit.default_timer()
+print (' %f' % (fim - inicio), end="  ")
+
+#---------------------------------heap--------------------
+inicio = timeit.default_timer()
+for n, vetor in vetores_aleatorios.items():
+    HeapSort.heap_sort(vetor)
     break
 fim = timeit.default_timer()
 print (' %f' % (fim - inicio), end="  ")
 
 
+#---------------------------------quick--------------------
+inicio = timeit.default_timer()
+for n, vetor in vetores_aleatorios.items():
+    QuickSort.quick_sort(vetor, 0, len(vetor) - 1)
+    break
+fim = timeit.default_timer()
+print (' %f' % (fim - inicio), end="  ")
 
 #---------------------------------counting--------------------
 inicio = timeit.default_timer()
@@ -104,3 +156,4 @@ print (' %f' % (fim - inicio), end="  ")
 
 print("\n")
 
+'''
