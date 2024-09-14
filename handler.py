@@ -20,7 +20,7 @@ vetores_aleatorios = vetor_aleatorio(inc, fim, stp)
 vetores_reversos = vetor_reverso(inc, fim, stp)
 vetores_ordenados = vetor_ordenado(inc, fim, stp)
 vetores_quase_ordenados = vetor_quase_ordenado(inc, fim, stp)
-
+'''
 # Exibindo vetores aleatórios
 print("[[RANDOM]]")
 for n, vetor in vetores_aleatorios.items():
@@ -43,18 +43,21 @@ for n, vetor in vetores_quase_ordenados.items():
 ''' 
 # Exibindo um exemplo de vetor gerado
 
-for n, vetor in vetores_gerados.items(0):
-    print(f"Vetor com {n} elementos: {vetor[:5]}...")  
-'''
+print("[[REVERSE]]")
+for n, vetor in vetores_reversos.items():
+    print(f"Vetor reverso com {n} elementos: {vetor[:50]}")
+
 
 print("[[RANDOM]]")
+print("n    Bubble    Insertion    Merge    Heap   Quick    Counting")
+
 inicio = timeit.default_timer()
 for n, vetor in vetores_aleatorios.items():
+    print(n, end="")
     BubbleSort.bubble_sort(vetor)
     break
 fim = timeit.default_timer()
-print ('duracao bubble sort: %f' % (fim - inicio))
-#print(vetor)
+print (' %f' % (fim - inicio), end="")
 
 #---------------------------------Insertion--------------------
 inicio = timeit.default_timer()
@@ -62,8 +65,42 @@ for n, vetor in vetores_aleatorios.items():
     InsertionSort.insertion_sort(vetor)
     break
 fim = timeit.default_timer()
-print ('duracao insertion sort: %f' % (fim - inicio))
-#print(vetor)
+print (' %f' % (fim - inicio), end="   ")
 
 
+#---------------------------------merge--------------------
+inicio = timeit.default_timer()
+for n, vetor in vetores_aleatorios.items():
+    MergeSort.mergeSort(vetor, 0, len(vetor)-1)
+    break
+fim = timeit.default_timer()
+print (' %f' % (fim - inicio), end=" ")
+
+#---------------------------------heap--------------------
+inicio = timeit.default_timer()
+for n, vetor in vetores_aleatorios.items():
+    HeapSort.heap_sort(vetor)
+    break
+fim = timeit.default_timer()
+print (' %f' % (fim - inicio), end="  ")
+
+#---------------------------------quick--------------------
+inicio = timeit.default_timer()
+for n, vetor in vetores_aleatorios.items():
+    QuickSort.quick_sort(vetor, 1, len(vetor))
+    break
+fim = timeit.default_timer()
+print (' %f' % (fim - inicio), end="  ")
+
+
+
+#---------------------------------counting--------------------
+inicio = timeit.default_timer()
+for n, vetor in vetores_aleatorios.items():
+    CountingSort.counting_sort(vetor)
+    break
+fim = timeit.default_timer()
+print (' %f' % (fim - inicio), end="  ")
+
+print("\n")
 

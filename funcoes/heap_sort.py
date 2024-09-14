@@ -1,8 +1,8 @@
 class HeapSort:
 
     @staticmethod
-    def swap(arr:list, i:int, j:int) -> None:
-        arr[i], arr[j] = arr[j], arr[i]
+    def swap(vetor, i, j):
+        vetor[i], vetor[j] = vetor[j], vetor[i]
 
     @staticmethod
     def heapify(vetor, n, i):
@@ -20,7 +20,7 @@ class HeapSort:
 
         # If largest is not root
         if largest != i:
-            HeapSort.swap(vetor[i], vetor[largest])
+            HeapSort.swap(vetor, i, largest)
 
             # Recursively heapify the affected sub-tree
             HeapSort.heapify(vetor, n, largest)
