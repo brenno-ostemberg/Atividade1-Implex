@@ -66,7 +66,7 @@ def printar_execucao_vetor_aleatorio(inc, fim, stp):
 
         inicio = timeit.default_timer()
         for vetor in [vetores]:
-            CountingSort.counting_sort(vetor)
+            CountingSort.counting_sort(vetor, max(vetor))
         fim = timeit.default_timer()
         print(f" {fim - inicio:7.6f}", end="")
 

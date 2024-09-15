@@ -73,7 +73,7 @@ def printar_execucao_vetor_reverso(inc, fim, stp):
         # Counting Sort
         inicio = timeit.default_timer()
         for vetor in [vetores]:
-            CountingSort.counting_sort(vetor)
+            CountingSort.counting_sort(vetor, max(vetor))
         fim = timeit.default_timer()
         print(f" {fim - inicio:7.6f}", end="")
 

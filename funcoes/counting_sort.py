@@ -1,23 +1,21 @@
 class CountingSort:
 
     @staticmethod
-    def counting_sort(vetor):
-        size = len(vetor)
-        entrada = [0] * size
+    def counting_sort(A, k):
+        C = [0] * (k + 1)
 
-        count = [0] * (max(vetor) + 1)
+        for j in range(len(A)):
+            C[A[j]] += 1
 
-        for i in range(0, size):
-            count[vetor[i]] += 1
+        for i in range(1, k + 1):
+            C[i] += C[i - 1]
 
-        for i in range(1, (max(vetor) + 1)):
-            count[i] += count[i - 1]
+        B = [0] * len(A)
 
-        i = size - 1
-        while i >= 0:
-            entrada[count[vetor[i]] - 1] = vetor[i]
-            count[vetor[i]] -= 1
-            i -= 1
+        for j in range(len(A) - 1, -1, -1):
+            B[C[A[j]] - 1] = A[j]  
+            C[A[j]] -= 1  
 
-        for i in range(0, size):
-            vetor[i] = entrada[i]
+        return B
+
+
