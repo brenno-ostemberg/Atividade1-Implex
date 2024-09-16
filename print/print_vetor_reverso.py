@@ -18,10 +18,12 @@ from funcoes.heap_sort import HeapSort
 from funcoes.merge_sort import MergeSort
 from vetores.vetor_reverso import vetor_reverso
 
+'''
 # Valores do Teste
 inc = 1000
 fim = 20000
 stp = 1000
+'''
 
 # Função que printa a execução dos algoritmos de ordenação com vetores ordenados
 def printar_execucao_vetor_reverso(inc, fim, stp): 
@@ -79,5 +81,7 @@ def printar_execucao_vetor_reverso(inc, fim, stp):
 
         print("\n")
 
+'''
 # Executando a função
 printar_execucao_vetor_reverso(inc, fim, stp)
+'''

@@ -17,10 +17,12 @@ from funcoes.heap_sort import HeapSort
 from funcoes.merge_sort import MergeSort
 from vetores.vetor_aleatorio import vetor_aleatorio
 
+'''
 # Valores do Teste
 inc = 1000
 fim = 13000
 stp = 1000
+'''
 
 # Função que printa a execução dos algoritmos de ordenação com vetores aleatórios
 def printar_execucao_vetor_aleatorio(inc, fim, stp):
@@ -72,5 +74,7 @@ def printar_execucao_vetor_aleatorio(inc, fim, stp):
 
         print("\n")
 
+'''
 # Chamando a função
 printar_execucao_vetor_aleatorio(inc, fim, stp)
+'''
