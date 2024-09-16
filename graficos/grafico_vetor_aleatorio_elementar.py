@@ -4,7 +4,7 @@ def grafico_vetores_aleatorios(tamanhos_vetores, tempo_bubble, tempo_insertion):
     plt.plot(tamanhos_vetores, tempo_bubble, label='Bubble', marker='+', color='purple')
     plt.plot(tamanhos_vetores, tempo_insertion, label='Insertion', marker='x', color='green')
 
-    plt.title('Algoritmos de ordenação')
+    plt.title('Algoritmos Elementares - Vetor Aleatório')
     plt.xlabel('n')
     plt.ylabel('Tempo (s)')
 

@@ -8,7 +8,7 @@ def grafico_vetores_aleatorios(tamanhos_vetores, tempo_bubble, tempo_insertion, 
     plt.plot(tamanhos_vetores, tempo_quick, label='Quick', marker='s', color='yellow')
     plt.plot(tamanhos_vetores, tempo_counting, label='Counting', marker='o', fillstyle='none', color='red')
 
-    plt.title('Algoritmos de ordenação')
+    plt.title('Algoritmos de Ordenação - Vetor Aleatório')
     plt.xlabel('n')
     plt.ylabel('Tempo (s)')
 
