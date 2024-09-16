@@ -4,7 +4,7 @@ def grafico_vetores_ordenados(tamanhos_vetores, tempo_bubble, tempo_insertion):
     plt.plot(tamanhos_vetores, tempo_bubble, label='Bubble', marker='+', color='purple')
     plt.plot(tamanhos_vetores, tempo_insertion, label='Insertion', marker='x', color='green')
 
-    plt.title('Algoritmos de Ordenação - Vetor Ordenado')
+    plt.title('Algoritmos Elementares - Vetor Ordenado')
     plt.xlabel('n')
     plt.ylabel('Tempo (s)')
 

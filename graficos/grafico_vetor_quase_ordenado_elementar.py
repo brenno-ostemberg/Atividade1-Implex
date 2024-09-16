@@ -4,7 +4,7 @@ def grafico_vetores_quase_ordenados(tamanhos_vetores, tempo_bubble, tempo_insert
     plt.plot(tamanhos_vetores, tempo_bubble, label='Bubble', marker='+', color='purple')
     plt.plot(tamanhos_vetores, tempo_insertion, label='Insertion', marker='x', color='green')
 
-    plt.title('Algoritmos de Ordenação - Vetor Quase Ordenado')
+    plt.title('Algoritmos Elementares - Vetor Quase Ordenado')
     plt.xlabel('n')
     plt.ylabel('Tempo (s)')
 
